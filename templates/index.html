@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block body %}
+
+    <h1>User list. Click on the user to see the details!</h1>
+    <ul>
+        {% for user in users %}
+            <!-- ideally in a real application unless you were in dev mode you wouldn't actually be able to see their password -->
+            <a href="/user/{{user.id}}" >Email: {{ user.email }}. Password: {{ user.password }}</a><br>
+        {% endfor %}
+    </ul>
+    <a href="/create_account">Create Account</a>
+    {% endblock %}

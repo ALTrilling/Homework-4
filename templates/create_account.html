@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block body %}
+    <form action="/add_user" method="POST">
+        <label for="email"></label>
+        <input type="text" name="email" id="email" placeholder="johndoe@example.com" required><br><br>
+        <label for="password"></label>
+        <input type="password" name="password" id="password" placeholder="password" required><br><br>
+        <button type="submit">Submit</button>
+    </form>
+{% endblock %}

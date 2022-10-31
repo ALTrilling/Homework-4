@@ -1,0 +1,15 @@
+
+{% extends "base.html" %}
+{% block body %}
+    email: {{user.email}}<br>
+    this is user number {{user.id}}
+    <form action="/change_details/{{user.id}}" method="POST">
+        <label for="email"></label>
+        <input type="text" name="email" id="email" placeholder="nolongerjohndoe@example.com" size="25"><br><br>
+        <label for="password"></label>
+        <input type="password" name="password" id="password" placeholder="newpassword" size="25"><br><br>
+        <button type="submit">Submit</button>
+    </form>
+    <a href="/delete_user/{{user.id}}">delete this user</a>
+    <a href="/">go back home</a>
+    {% endblock %}
